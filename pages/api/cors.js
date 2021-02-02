@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   await cors(req, res)
 
       res.status(200).json({ message: 'Hello Everyone!' });
-//  res.setHeader("Access-Control-Allow-Headers: Origin, Content-Type, Content-Length, Accept-Encoding");
+  res.setHeader("Access-Control-Allow-Headers: Origin, Content-Type, Content-Length, Accept-Encoding");
  // res.end();
 
   // Rest of the API logic
