@@ -14,13 +14,13 @@ const cors = initMiddleware(
   })
 );
 export default async function handler(req, res) {
-  console.log(req)
-  await cors(req, res);
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, Content-Type, Content-Length, Accept-Encoding"
-  );
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+ 
+//  await cors(req, res);
+//  res.setHeader(
+//    "Access-Control-Allow-Headers",
+//    "Origin, Content-Type, Content-Length, Accept-Encoding"
+//  );
+//  res.setHeader("Access-Control-Allow-Credentials", "true");
   res.json([
     {
       field: "description",
