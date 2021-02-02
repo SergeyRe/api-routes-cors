@@ -11,7 +11,7 @@ const cors = initMiddleware(
       /^(https:\/\/(?:.*\.)?yandex\.(?:ru|by|uz|com|com\.tr))$/,
       /^(https:\/\/(?:.*\.)?turbopages.org)$/,
     ],
-    credentials:"true"
+    credentials:true
   })
 );
 export default async function handler(req, res) {
