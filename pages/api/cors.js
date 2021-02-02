@@ -18,7 +18,18 @@ export default async function handler(req, res) {
  
   res.setHeader("Access-Control-Allow-Headers", "Origin, Content-Type, Content-Length, Accept-Encoding");
   res.setHeader("Access-Control-Allow-Credentials", "true");
-      res.json({ message: 'Hello Everyone!' })
+      res.json([
+    {
+      field: "description",
+      value:
+        "Спасибо за подписку на появление в продаже.Мы сообщим , как только так сразу"
+    },
+        {
+       field: "link",
+       value: "На главную",
+       href: "https://batteryhelp.ru"
+    }
+  ]);one!' })
   
 
   
