@@ -29,7 +29,7 @@ export default async function handler(req, res) {
        value: "На главную",
        href: "https://batteryhelp.ru"
     }
-  ]);one!' })
+  ])
   
 
   
