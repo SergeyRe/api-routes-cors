@@ -12,10 +12,11 @@ const cors = initMiddleware(
 
 export default async function handler(req, res) {
   // Run cors
- // await cors(req, res)
-  await cors(req, res, () => {
+  await cors(req, res)
+
       res.status(200).json({ message: 'Hello Everyone!' });
-    });
+  res.setHeader("Access-Control-Allow-Headers: Origin, Content-Type, Content-Length, Accept-Encoding");
+  res.end();
 
   // Rest of the API logic
  // res.json({ message: 'Hello Everyone!' })
