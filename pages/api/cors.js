@@ -13,8 +13,13 @@ const cors = initMiddleware(
 export default async function handler(req, res) {
   // Run cors
   await cors(req, res)
-  res.status(200).setHeader("Access-Control-Allow-Headers: Origin, Content-Type, Content-Length, Accept-Encoding");
-      res.status(200).json({ message: 'Hello Everyone!' });
+
+    
+  return new Promise((resolve, reject) => {
+    res.setHeader('Content-Type', 'application/json');
+      res.status(200).json({ message: 'Hello Everyone!' })
+      resolve();
+  }
 
   
 
