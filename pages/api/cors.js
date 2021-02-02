@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
     
   return new Promise((resolve, reject) => {
-    res.setHeader("Access-Control-Allow-Credentials: true");
+ //   res.setHeader("Access-Control-Allow-Credentials: true");
       res.status(200).json({ message: 'Hello Everyone!' })
       resolve();
   })
