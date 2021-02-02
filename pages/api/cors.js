@@ -6,7 +6,7 @@ const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
   Cors({
     // Only allow requests with GET, POST and OPTIONS
-    methods:  'POST',
+    methods:  ['POST'],
   })
 )
 
@@ -15,11 +15,10 @@ export default async function handler(req, res) {
   await cors(req, res)
 
     
-  return new Promise((resolve, reject) => {
+ 
  //   res.setHeader("Access-Control-Allow-Credentials: true");
-      res.status(200).json({ message: 'Hello Everyone!' })
-      resolve();
-  })
+      res.json({ message: 'Hello Everyone!' })
+  
 
   
 
