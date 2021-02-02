@@ -12,8 +12,11 @@ const cors = initMiddleware(
 
 export default async function handler(req, res) {
   // Run cors
-  await cors(req, res)
+ // await cors(req, res)
+  await cors(req, res, () => {
+      res.status(200).json({ message: 'Hello Everyone!' });
+    });
 
   // Rest of the API logic
-  res.json({ message: 'Hello Everyone!' })
+ // res.json({ message: 'Hello Everyone!' })
 }
