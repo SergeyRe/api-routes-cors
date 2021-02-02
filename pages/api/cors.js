@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Headers: Origin, Content-Type, Content-Length, Accept-Encoding");
       res.status(200).json({ message: 'Hello Everyone!' });
 
-  res.end();
+  
 
   // Rest of the API logic
  // res.json({ message: 'Hello Everyone!' })
