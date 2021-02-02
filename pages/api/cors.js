@@ -11,16 +11,17 @@ const cors = initMiddleware(
       /^(https:\/\/(?:.*\.)?yandex\.(?:ru|by|uz|com|com\.tr))$/,
       /^(https:\/\/(?:.*\.)?turbopages.org)$/,
     ],
+    credentials:"true"
   })
 );
 export default async function handler(req, res) {
  
-//  await cors(req, res);
-//  res.setHeader(
-//    "Access-Control-Allow-Headers",
+  await cors(req, res);
+ // res.setHeader(
+ //   "Access-Control-Allow-Headers",
 //    "Origin, Content-Type, Content-Length, Accept-Encoding"
 //  );
-//  res.setHeader("Access-Control-Allow-Credentials", "true");
+ // res.setHeader("Access-Control-Allow-Credentials", "true");
   res.json([
     {
       field: "description",
